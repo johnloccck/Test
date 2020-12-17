@@ -1,0 +1,48 @@
+body, html {height: 100%;
+  
+    
+    }
+    .bg {
+        background-image:radial-gradient(circle, red, yellow, orange, green, blue, brown);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%
+    }
+    
+    .box {width: 200px;
+    height:300px;
+   }
+
+/*img {
+        width: 200px;
+        height: 300px;
+    }*/
+.back {
+        width: 200px;
+        height: 300px;
+        position: absolute;
+        transition: transform 1s linear;
+        transform: perspective(900px) rotateY(180deg);
+        backface-visibility: hidden;
+    }
+.front {
+        width: 200px;
+        height: 300px;
+        position: absolute;
+        transition: transform 1s linear;
+        backface-visibility: hidden;
+
+    }
+
+.box:hover > .front {
+    transform: perspective(900px) rotateY(180deg);
+
+}
+.box:hover > .back {
+    transform: perspective(900px) rotateY(0deg);
+
+}
+
+
+
